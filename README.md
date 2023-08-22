@@ -2,6 +2,7 @@
 22 aôut 2023 :
 🚧Le site ne sera plus héberger avec GitHub Pages, Il sera donc inaccessible jusqu'à la fin du développement de 'récréation'⚠️
 -> l'interface bac à sable 'sable' et bacfr24 seront mis dans les principaux outils de SBW 
+Les applications en mode "bac à sable" resteront sous la forme de GitHub Pages 🙃
 
 Sofiane Benstitou Website - Benstitou Sofiane Portfolio
 
