@@ -1,4 +1,8 @@
 # sbw
+22 aôut 2023 :
+🚧Le site ne sera plus héberger avec GitHub Pages, Il sera donc inaccessible jusqu'à la fin du développement de 'récréation'⚠️
+-> l'interface bac à sable 'sable' sera mis dans les principaux outils de SBW
+
 Sofiane Benstitou Website - Benstitou Sofiane Portfolio
 
 Je prépare une dinguerie 😝... A très bientôt
