@@ -1,0 +1,182 @@
+/* Font: Open Sans bold 700 : font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background-color: #c92d2d;
+    color: white;
+    font-family: 'Open Sans';
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: #171716;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    background-color: #171716;
+
+    border-radius: 30px;
+    
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main.agrandit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main .gauche{
+    margin-left: 150px;
+    margin-top: 2%;
+    text-align: center;
+}
+
+main .gauche h2{
+    font-size: 40px;
+}
+
+main .droite{
+    margin-top: 2%;
+}
+main .droite h2{
+    max-width: 700px;
+    margin-right: 50px;
+    font-size: 30px;
+}
+main .droite a{
+    display: block;
+    font-size: 35px;
+    text-decoration: none;
+    background-color: #3a7dd5;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    max-width: 375px;
+    border-radius: 20px;
+}
+
+
+footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #171716;
+    text-align: center;
+    
+}
+
+
+a.header{
+    text-decoration: none;
+    color: white;
+}
+
+.messageContainer{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+message{
+    text-align: center;
+    max-width: 1000px;
+    background-color: #171716;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.projetContainer{
+    margin: 20px;
+    margin-top: 20px;
+}
+
+a.projet{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    max-width: 200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-radius: 30px;
+
+}
+
+a.projet h2{
+    background-color: #171716;
+    word-wrap: break-word;
+    width: 200px;
+    text-align: center;
+    max-width: 170px;
+    border-radius: 20px;
+}
+
+
+main.gestion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px
+}
+
+form textarea{
+    font-size: 30px;
+    background-color: #171716;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+form input{
+    background-color: gray;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
