@@ -4,7 +4,9 @@
 -> l'interface bac à sable 'sable' sera mis dans les principaux outils de SBW 
 Les applications en mode "bac à sable" resteront sous la forme de GitHub Pages 🙃
 
-27 aôut : Le développement de récréation à débuter, ce qui fonctionne avec un hébergerment local : création et connexion sur un compte et portinfo avec gestiond de contenue via gestion.php
+27 aôut :
+Le développement de récréation à débuter, ce qui fonctionne avec un hébergerment local : création et connexion sur un compte et portinfo avec gestiond de contenue via gestion.php
+Vous avez pour le moment plus de détails sur la gestion des groupes utilisateurs via sbw.sql
 
 Sofiane Benstitou Website - Benstitou Sofiane Portfolio
 
