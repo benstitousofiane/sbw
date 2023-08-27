@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="styles/recreation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBW - Récréation/NOM DE LA MATIERE</title>
+</head>
+<body>
+    <header><a href="./"><h1>SBW/🪑/📚/EMOJI MATIERE</h1></a></header>
+    <main>
+        <div class="gauche">
+            <h2>
+                Choisissez la section
+            </h2>
+            <form action="cours.php" id="formulaireOuvertureCours">
+                <!-- info... -->
+                <a href="#lol" style="background-color: #18cd07;" onclick="ouvertureCours()">Cours📗</a>
+            </form>
+            <form action="exercices.php" id="formulaireOuvertureDevoirs">
+                <a href="#lol" style="background-color: #3a7dd5;" onclick="ouvertureDevoirs()">Devoirs📘</a>
+            </form>
+            <form action="devoirs.php" id="formulaireOuvertureExercices">
+                <a href="#lol" style="background-color: #c92d2d;" onclick="ouvertureExercices()">Exercices📕</a>
+            </form>
+        </div>
+
+        <div class="droite">
+            <h1 class="bienvenue">Bienvenue sur la matière NOM DE LA MATIERE</h1>
+        </div>
+    </main>
+    <footer><h2>Site web libre de droit | Code source : <a href="https://github.com/benstitousofiane/sbw" target="_blank"><img src="../githubicon.png" alt="Icone GitHub" width="22"></a></h2></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
