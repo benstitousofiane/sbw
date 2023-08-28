@@ -8,6 +8,12 @@ Les applications en mode "bac à sable" resteront sous la forme de GitHub Pages 
 Le développement de récréation à débuter, ce qui fonctionne avec un hébergerment local : création et connexion sur un compte et portinfo avec gestiond de contenue via gestion.php
 Vous avez pour le moment plus de détails sur la gestion des groupes utilisateurs via sbw.sql
 
+28 aôut :
+Pour des raisons de praticités et de sécurités, le site web se "fabriquera" en mettant bout à bout les différentes applications et programmes que j'ai conçu comme prévue initialement. 
+A compté de la fin du développement de récréation📚, toutes les applications qui sont en dehors de la page d'accueille possèderons leurs propres répertoire sur GitHub !
+Ceci inclura le début du de la refonte de beaucoup de mes projets et un portage en ligne des mes applications et services, c'est à dire l'apparution de programmes avec des sauvegardes et divers autre fonctionnalités !
+En espérant pouvoirs vous offrir la meilleure expérences bureautique et mobile, tout ça gratuitement. 
+
 Sofiane Benstitou Website - Benstitou Sofiane Portfolio
 
 Je prépare une dinguerie 😝... A très bientôt
