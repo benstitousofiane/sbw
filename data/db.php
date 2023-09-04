@@ -10,6 +10,6 @@
     }
 
     catch(PDOException $e){
-        echo 'Erreur de connexion à la base de donnée : ' . $e; 
+        echo 'Erreur de connexion à la base de donnée.'; 
     }
 ?>
