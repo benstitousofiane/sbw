@@ -22,13 +22,13 @@
 
     <?php 
         if ($_POST['mode'] == "dates"){
-            echo '<form action="ouverture" method="post">';
+            echo '<form action="ouverture.php" method="post">';
             echo '<input type="hidden" name="matiere" id="matiere" value="'. $_POST['matiere'] .'">';
             echo '<input type="hidden" name="emoji" id="emoji" value="'. $_POST['emoji'] .'">';
             echo '<a href="#lol" onclick="this.parentNode.submit()"><h1>SBW/🪑/📚/'. $_POST['emoji'] .'/📖➡️📘/</h1></a>';
             echo '</form>';
         } else if ($_POST['mode'] == "contenus"){
-            echo '<form action="devoirs" method="post">';
+            echo '<form action="devoirs.php" method="post">';
             echo '<input type="hidden" name="mode" id="mode" value="dates">';
             echo '<input type="hidden" name="matiere" id="matiere" value="'. $_POST['matiere'] .'">';
             echo '<input type="hidden" name="emoji" id="emoji" value="'. $_POST['emoji'] .'">';
@@ -50,7 +50,7 @@
                     echo '<h2>Choisissez une date</h2>';
                     $q = $db -> query("SELECT * FROM recreation_devoirs_dates WHERE matiere = '$matiere' ORDER BY id DESC");
                     while ($devoir = $q -> fetch()){
-                        echo '<form action="devoirs" method="post">';
+                        echo '<form action="devoirs.php" method="post">';
                         echo '<input type="hidden" name="date" id="date" value="'. $devoir['date'] .'">';
                         echo '<input type="hidden" name="mode" id="mode" value="contenus">';
                         echo '<input type="hidden" name="matiere" id="matiere" value="'. $_POST['matiere'] .'">';
