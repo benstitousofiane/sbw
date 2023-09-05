@@ -8,7 +8,7 @@
     <title>SBW/Récréation/<?= $_POST['matiere'] ?></title>
 </head>
 <body>
-    <header><a href="./"><h1>SBW/🪑/📚/<?= $_POST['emoji'] ?>/📖➡️❓</h1></a></header>
+    <header><a href="../recreation/"><h1>SBW/🪑/📚/<?= $_POST['emoji'] ?>/📖➡️❓</h1></a></header>
     <main>
         <div class="gauche">
             <h2>
