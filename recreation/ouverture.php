@@ -14,19 +14,19 @@
             <h2>
                 Choisissez la section
             </h2>
-            <form action="cours" method="post">
+            <form action="cours.php" method="post">
                 <input type="hidden" name="mode" id="mode" value="chapitres">
                 <input type="hidden" name="matiere" id="matiere" value="<?= $_POST['matiere'] ?>">
                 <input type="hidden" name="emoji" id="emoji" value="<?= $_POST['emoji'] ?>">
                 <a href="#lol" style="background-color: #18cd07;" onclick="this.parentNode.submit()">Cours📗</a>
             </form>
-            <form action="devoirs" method="post">
+            <form action="devoirs.php" method="post">
                 <input type="hidden" name="mode" id="mode" value="dates">
                 <input type="hidden" name="matiere" id="matiere" value="<?= $_POST['matiere'] ?>">
                 <input type="hidden" name="emoji" id="emoji" value="<?= $_POST['emoji'] ?>">
                 <a href="#lol" style="background-color: #3a7dd5;" onclick="this.parentNode.submit()">Devoirs📘</a>
             </form>
-            <form action="exercices" method="post">
+            <form action="exercices;php" method="post">
                 <input type="hidden" name="mode" id="mode" value="dates">
                 <input type="hidden" name="matiere" id="matiere" value="<?= $_POST['matiere'] ?>">
                 <input type="hidden" name="emoji" id="emoji" value="<?= $_POST['emoji'] ?>">
