@@ -14,7 +14,7 @@
         if (array_key_exists('isconnect', $_SESSION)){
             echo '<h1>SBW /🪑/</h1><a href="proc/deconnexionProc.php" class="jaune">'. $_SESSION['username'] . '/Déconnexion</a>';
         }else{
-            echo '<h1>SBW /🪑/</h1><a href="compte/connexion" class="jaune">Connexion</a>';
+            echo '<h1>SBW /🪑/</h1><a href="/compte/connexion" class="jaune">Connexion</a>';
         }
         ?>
     </header>
