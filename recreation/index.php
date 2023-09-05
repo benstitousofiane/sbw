@@ -20,7 +20,7 @@
                 
                 $q = $db -> query('SELECT * FROM recreation_matieres ORDER BY id ASC');
                 while ($matiere = $q -> fetch()){
-                    echo '<form action="ouverture" method="post">';
+                    echo '<form action="ouverture.php" method="post">';
                     echo '<input type="hidden" name="matiere" id="matiere" value="'. $matiere['nom'] .'">';
                     echo '<input type="hidden" name="emoji" id="emoji" value="'. $matiere['emoji'] .'">';
                     echo '<a href="#lol" onclick="this.parentNode.submit()" style="background-color: '. $matiere['couleur'] .';">'. $matiere['nom'] .' '. $matiere['emoji'] .'</a>';
