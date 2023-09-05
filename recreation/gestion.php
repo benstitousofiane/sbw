@@ -37,7 +37,7 @@
             <input type="submit" name="envoie" id="envoie">
         </form>
         <h3>Ajouter un contenu sur un chapitre :</h3>
-        <form action="../proc/recreationCoursAjoutContenuProc.php" method="post" required>
+        <form action="../proc/recreationCoursAjoutContenuProc.php" method="post">
             <input type="text" name="nom" id="nom" placeholder="Nom du contenu" required><br>
             <input type="text" name="matiere" id="matiere" placeholder="Matière associé au contenu" required><br>
             <input type="number" name="numero" id="numero" placeholder="Numéro du chapitre" required><br>
