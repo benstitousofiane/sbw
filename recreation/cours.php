@@ -22,13 +22,13 @@
 
     <?php 
         if ($_POST['mode'] == "chapitres"){
-            echo '<form action="ouverture" method="post">';
+            echo '<form action="ouverture.php" method="post">';
             echo '<input type="hidden" name="matiere" id="matiere" value="'. $_POST['matiere'] .'">';
             echo '<input type="hidden" name="emoji" id="emoji" value="'. $_POST['emoji'] .'">';
             echo '<a href="#lol" onclick="this.parentNode.submit()"><h1>SBW/🪑/📚/'. $_POST['emoji'] .'/📖➡️📗/</h1></a>';
             echo '</form>';
         } else if ($_POST['mode'] == "contenus"){
-            echo '<form action="cours" method="post">';
+            echo '<form action="cours.php" method="post">';
             echo '<input type="hidden" name="mode" id="mode" value="chapitres">';
             echo '<input type="hidden" name="matiere" id="matiere" value="'. $_POST['matiere'] .'">';
             echo '<input type="hidden" name="emoji" id="emoji" value="'. $_POST['emoji'] .'">';
@@ -50,7 +50,7 @@
                     echo '<h2>Choisissez un chapitre</h2>';
                     $q = $db -> query("SELECT * FROM recreation_cours_chapitres WHERE matiere = '$matiere'");
                     while ($chapitre = $q -> fetch()){
-                        echo '<form action="cours" method="post">';
+                        echo '<form action="cours.php" method="post">';
                         echo '<input type="hidden" name="nom" id="nom" value="'. $chapitre['nom'] .'">';
                         echo '<input type="hidden" name="mode" id="mode" value="contenus">';
                         echo '<input type="hidden" name="matiere" id="matiere" value="'. $_POST['matiere'] .'">';
@@ -64,7 +64,7 @@
                     $numero = $_POST['numero'];
                     $q = $db -> query("SELECT * FROM recreation_cours_contenus WHERE matiere = '$matiere' AND numero = '$numero'");
                     while ($contenu = $q -> fetch()){
-                        echo '<form action="cours" method="post">';
+                        echo '<form action="cours.php" method="post">';
                         echo '<input type="hidden" name="nom" id="nom" value="'. $_POST['nom'] .'">';
                         echo '<input type="hidden" name="mode" id="mode" value="contenus">';
                         echo '<input type="hidden" name="contenu" id="contenu" value="'. $contenu['contenu'] .'">';
