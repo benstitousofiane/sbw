@@ -10,3 +10,6 @@
 - Une liaison entre mes projets avec SBW.
 - Ajout de l'application sable en outil principale après la liaison.
 - Ajout d'une version majeur de LaCase pour "Maths & Recherche".
+
+A faire pour l'hébergement :
+- mettre le chemin avec le .html et les chemins normaux si ceux-ci bloque.
