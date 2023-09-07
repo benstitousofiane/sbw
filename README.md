@@ -12,4 +12,4 @@
 - Ajout d'une version majeur de LaCase pour "Maths & Recherche".
 
 A faire pour l'hébergement :
-- mettre le chemin avec le .html et les chemins normaux si ceux-ci bloque.
+- Améliorer le CMS pour pouvoir éditer plus facilement et rapidement des contenus
