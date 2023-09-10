@@ -36,6 +36,7 @@ header a.jaune{
     color: #171716;
     padding: 7px;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 
@@ -83,6 +84,10 @@ main a.vert{
 }
 main a.bleu{
     background-color: #3a7dd5;
+}
+
+main a.violet{
+    background-color: #673299;
 }
 
 

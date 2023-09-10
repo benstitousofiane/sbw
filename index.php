@@ -25,6 +25,7 @@
         </h1>
         <nav>
             <a href="portinfo/" class="rouge">Portinfo 💻</a><br>
+            <a href="descartes/" class="violet">Descartes 🃏</a> <br>
             <a href="recreation/" class="vert">Récréation 📚</a><br>
             <a href="" class="bleu">Maths & Recherche (Bientôt) 🔢 </a><br>
         </nav>
