@@ -7,7 +7,7 @@
 - Récréation : Un site de publication des divers cours, et devoirs avec mes réponses (exercices) que j'ai reçu et écris tout au long de l'année.
 
 # Prochaînement :
-- Ajout de descartes pour apprendre ses cours
+- Ajout de descartes🃏 pour apprendre ses cours
 - Une liaison entre mes projets avec SBW.
 - Ajout de l'application sable en outil principale après la liaison.
 - Ajout d'une version majeur de LaCase pour "Maths & Recherche".
