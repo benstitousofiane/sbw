@@ -8,6 +8,7 @@
 
 # Prochaînement :
 - Ajout de descartes🃏 pour apprendre ses cours (accès anticipé) -> tout les projets de descates seront supprimés pour la version stable
+  Réparer l'apparition en doublons des projets et coder la gestion des cartes
 - Une liaison entre mes projets avec SBW.
 - Ajout de l'application sable en outil principale après la liaison.
 - Ajout d'une version majeur de LaCase pour "Maths & Recherche".
