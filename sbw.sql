@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : lun. 04 sep. 2023 à 21:39
--- Version du serveur : 8.0.31
--- Version de PHP : 8.0.26
+-- Hôte : sql304.infinityfree.com
+-- Généré le :  Dim 10 sep. 2023 à 17:28
+-- Version du serveur :  10.4.17-MariaDB
+-- Version de PHP :  7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -15,11 +16,38 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `sbw`
+-- Base de données :  `if0_34965844_sbw`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `descartes_cartes`
+--
+
+CREATE TABLE `descartes_cartes` (
+  `id` int(11) NOT NULL,
+  `nom` text NOT NULL,
+  `proprietaire` text NOT NULL,
+  `question` text NOT NULL,
+  `reponse` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `descartes_projets`
+--
+
+CREATE TABLE `descartes_projets` (
+  `id` int(11) NOT NULL,
+  `nom` text NOT NULL,
+  `proprietaire` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -27,21 +55,19 @@ SET time_zone = "+00:00";
 -- Structure de la table `portinfo`
 --
 
-DROP TABLE IF EXISTS `portinfo`;
-CREATE TABLE IF NOT EXISTS `portinfo` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `titre` text NOT NULL,
-  `emoji` text NOT NULL,
-  `image` text NOT NULL,
-  `description` text NOT NULL,
-  `plateforme` text NOT NULL,
-  `lien` text NOT NULL,
-  `langages` text NOT NULL,
-  `dependances` text NOT NULL,
-  `objectif` text NOT NULL,
-  `couleur` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `portinfo` (
+  `id` int(11) NOT NULL,
+  `titre` text COLLATE utf8_unicode_ci NOT NULL,
+  `emoji` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` text COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `plateforme` text COLLATE utf8_unicode_ci NOT NULL,
+  `lien` text COLLATE utf8_unicode_ci NOT NULL,
+  `langages` text COLLATE utf8_unicode_ci NOT NULL,
+  `dependances` text COLLATE utf8_unicode_ci NOT NULL,
+  `objectif` text COLLATE utf8_unicode_ci NOT NULL,
+  `couleur` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -49,14 +75,12 @@ CREATE TABLE IF NOT EXISTS `portinfo` (
 -- Structure de la table `recreation_cours_chapitres`
 --
 
-DROP TABLE IF EXISTS `recreation_cours_chapitres`;
-CREATE TABLE IF NOT EXISTS `recreation_cours_chapitres` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `matiere` text NOT NULL,
-  `nom` text NOT NULL,
-  `numero` int NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_cours_chapitres` (
+  `id` int(11) NOT NULL,
+  `matiere` text COLLATE utf8_unicode_ci NOT NULL,
+  `nom` text COLLATE utf8_unicode_ci NOT NULL,
+  `numero` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -64,15 +88,13 @@ CREATE TABLE IF NOT EXISTS `recreation_cours_chapitres` (
 -- Structure de la table `recreation_cours_contenus`
 --
 
-DROP TABLE IF EXISTS `recreation_cours_contenus`;
-CREATE TABLE IF NOT EXISTS `recreation_cours_contenus` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nom` text NOT NULL,
-  `matiere` text NOT NULL,
-  `numero` int NOT NULL,
-  `contenu` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_cours_contenus` (
+  `id` int(11) NOT NULL,
+  `nom` text COLLATE utf8_unicode_ci NOT NULL,
+  `matiere` text COLLATE utf8_unicode_ci NOT NULL,
+  `numero` int(11) NOT NULL,
+  `contenu` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -80,14 +102,12 @@ CREATE TABLE IF NOT EXISTS `recreation_cours_contenus` (
 -- Structure de la table `recreation_devoirs_contenus`
 --
 
-DROP TABLE IF EXISTS `recreation_devoirs_contenus`;
-CREATE TABLE IF NOT EXISTS `recreation_devoirs_contenus` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `matiere` text NOT NULL,
-  `date` text NOT NULL,
-  `contenu` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_devoirs_contenus` (
+  `id` int(11) NOT NULL,
+  `matiere` text COLLATE utf8_unicode_ci NOT NULL,
+  `date` text COLLATE utf8_unicode_ci NOT NULL,
+  `contenu` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -95,13 +115,11 @@ CREATE TABLE IF NOT EXISTS `recreation_devoirs_contenus` (
 -- Structure de la table `recreation_devoirs_dates`
 --
 
-DROP TABLE IF EXISTS `recreation_devoirs_dates`;
-CREATE TABLE IF NOT EXISTS `recreation_devoirs_dates` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `matiere` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `date` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_devoirs_dates` (
+  `id` int(11) NOT NULL,
+  `matiere` text COLLATE utf8_unicode_ci NOT NULL,
+  `date` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -109,14 +127,12 @@ CREATE TABLE IF NOT EXISTS `recreation_devoirs_dates` (
 -- Structure de la table `recreation_exercices_contenus`
 --
 
-DROP TABLE IF EXISTS `recreation_exercices_contenus`;
-CREATE TABLE IF NOT EXISTS `recreation_exercices_contenus` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `matiere` text NOT NULL,
-  `date` text NOT NULL,
-  `contenu` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_exercices_contenus` (
+  `id` int(11) NOT NULL,
+  `matiere` text COLLATE utf8_unicode_ci NOT NULL,
+  `date` text COLLATE utf8_unicode_ci NOT NULL,
+  `contenu` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -124,13 +140,11 @@ CREATE TABLE IF NOT EXISTS `recreation_exercices_contenus` (
 -- Structure de la table `recreation_exercices_dates`
 --
 
-DROP TABLE IF EXISTS `recreation_exercices_dates`;
-CREATE TABLE IF NOT EXISTS `recreation_exercices_dates` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `matiere` text NOT NULL,
-  `date` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_exercices_dates` (
+  `id` int(11) NOT NULL,
+  `matiere` text COLLATE utf8_unicode_ci NOT NULL,
+  `date` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -138,14 +152,12 @@ CREATE TABLE IF NOT EXISTS `recreation_exercices_dates` (
 -- Structure de la table `recreation_matieres`
 --
 
-DROP TABLE IF EXISTS `recreation_matieres`;
-CREATE TABLE IF NOT EXISTS `recreation_matieres` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nom` text NOT NULL,
-  `emoji` text NOT NULL,
-  `couleur` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `recreation_matieres` (
+  `id` int(11) NOT NULL,
+  `nom` text COLLATE utf8_unicode_ci NOT NULL,
+  `emoji` text COLLATE utf8_unicode_ci NOT NULL,
+  `couleur` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -153,15 +165,153 @@ CREATE TABLE IF NOT EXISTS `recreation_matieres` (
 -- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `state` varchar(255) NOT NULL DEFAULT 'valide',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `state` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'valide'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `descartes_cartes`
+--
+ALTER TABLE `descartes_cartes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `descartes_projets`
+--
+ALTER TABLE `descartes_projets`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `portinfo`
+--
+ALTER TABLE `portinfo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_cours_chapitres`
+--
+ALTER TABLE `recreation_cours_chapitres`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_cours_contenus`
+--
+ALTER TABLE `recreation_cours_contenus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_devoirs_contenus`
+--
+ALTER TABLE `recreation_devoirs_contenus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_devoirs_dates`
+--
+ALTER TABLE `recreation_devoirs_dates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_exercices_contenus`
+--
+ALTER TABLE `recreation_exercices_contenus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_exercices_dates`
+--
+ALTER TABLE `recreation_exercices_dates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `recreation_matieres`
+--
+ALTER TABLE `recreation_matieres`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `descartes_cartes`
+--
+ALTER TABLE `descartes_cartes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `descartes_projets`
+--
+ALTER TABLE `descartes_projets`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `portinfo`
+--
+ALTER TABLE `portinfo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_cours_chapitres`
+--
+ALTER TABLE `recreation_cours_chapitres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_cours_contenus`
+--
+ALTER TABLE `recreation_cours_contenus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_devoirs_contenus`
+--
+ALTER TABLE `recreation_devoirs_contenus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_devoirs_dates`
+--
+ALTER TABLE `recreation_devoirs_dates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_exercices_contenus`
+--
+ALTER TABLE `recreation_exercices_contenus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_exercices_dates`
+--
+ALTER TABLE `recreation_exercices_dates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `recreation_matieres`
+--
+ALTER TABLE `recreation_matieres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
