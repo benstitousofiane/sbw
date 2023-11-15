@@ -23,16 +23,16 @@ function changeMode(){
         mode = "reponse";
         question.type = 'hidden';
         reponse.type = 'text';
-        changerMode.innerHTML = "Mode question";
-        gestionText.innerHTML = "ÉCRIVEZ UNE RÉPONSE";
-        gestionText.innerHTML = reponse.value;
+        changerMode.innerText = "Mode question";
+        gestionText.innerText = "ÉCRIVEZ UNE RÉPONSE";
+        gestionText.innerText = reponse.value;
     } else if (mode === "reponse"){
         mode = "question";
         question.type = 'text';
         reponse.type = 'hidden';
-        changerMode.innerHTML = "Mode réponse";
-        gestionText.innerHTML = "ÉCRIVEZ UNE QUESTION";
-        gestionText.innerHTML = question.value;
+        changerMode.innerText = "Mode réponse";
+        gestionText.innerText = "ÉCRIVEZ UNE QUESTION";
+        gestionText.innerText = question.value;
     }
 
     //formatage du text après le changement de mode
@@ -48,9 +48,9 @@ function changeMode(){
             });
         } else{
             if (question.value === ''){
-                gestionText.innerHTML = "ÉCRIVEZ UNE QUESTION";
+                gestionText.innerText = "ÉCRIVEZ UNE QUESTION";
             } else{
-                gestionText.innerHTML = question.value;
+                gestionText.innerText = question.value;
             }
         }
     } else if (mode === "reponse"){
@@ -65,9 +65,9 @@ function changeMode(){
             });
         } else{
             if (reponse.value === ''){
-                gestionText.innerHTML = "ÉCRIVEZ UNE RÉPONSE";
+                gestionText.innerText = "ÉCRIVEZ UNE RÉPONSE";
             } else{
-                gestionText.innerHTML = reponse.value;
+                gestionText.innerText = reponse.value;
             }
         }
     }
@@ -92,7 +92,7 @@ mainGestion.addEventListener('click', () => {
                 trowOnError : false,
             });
         } else{
-            gestionText.innerHTML = question.value;
+            gestionText.innerText = question.value;
         }
     } else if (mode === "reponse"){
         if ((reponse.value).includes("\\(") && (reponse.value).includes("\\)")){
@@ -105,7 +105,7 @@ mainGestion.addEventListener('click', () => {
                 trowOnError : false,
             });
         } else{
-            gestionText.innerHTML = reponse.value;
+            gestionText.innerText = reponse.value;
         }
     }
 });
